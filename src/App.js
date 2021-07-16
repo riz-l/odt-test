@@ -1,25 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+// Import: Packages
+import React from "react";
+import styled from "styled-components";
 
-function App() {
+// Import: Components
+import { Header } from "./app/components";
+
+// Component: App
+export default function App() {
+  // Variable accessed from .env file
+  const somethingImportant = process.env.REACT_APP_SOMETHING_IMPORTANT;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <Container>
+      <Header />
+
+      <Wrapper>
+        <h1>SAVE ME TO GITGUB</h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          .env Variable: <b>{somethingImportant}</b>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      </Wrapper>
+    </Container>
   );
 }
 
-export default App;
+// Element: Container
+const Container = styled.div`
+  margin: 0 auto;
+  min-height: calc(100vh - 200px);
+  width: 80%;
+`;
+
+// Element: Wrapper
+const Wrapper = styled.div`
+  background-color: tomato;
+  height: auto;
+  min-height: calc(100vh - 200px);
+  padding: 2rem;
+  text-align: center;
+
+  & h1 {
+    font-size: 4rem;
+  }
+
+  & p {
+    font-size: 2rem;
+  }
+`;
