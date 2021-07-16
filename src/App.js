@@ -7,18 +7,12 @@ import { Header } from "./app/components";
 
 // Component: App
 export default function App() {
-  // Variable accessed from .env file
-  const somethingImportant = process.env.REACT_APP_SOMETHING_IMPORTANT;
-
   return (
     <Container>
       <Header />
 
       <Wrapper>
         <h1>SAVE ME TO GITGUB</h1>
-        <p>
-          .env Variable: <b>{somethingImportant}</b>
-        </p>
       </Wrapper>
     </Container>
   );
