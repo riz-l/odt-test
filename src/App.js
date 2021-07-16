@@ -12,7 +12,7 @@ export default function App() {
       <Header />
 
       <Wrapper>
-        <h1>BROKEN</h1>
+        <h1>This should say Hi</h1>
       </Wrapper>
     </Container>
   );
